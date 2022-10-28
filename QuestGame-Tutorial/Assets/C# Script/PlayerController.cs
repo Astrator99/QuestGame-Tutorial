@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
    [SerializeField] private float rotationSpeed = 10f;
 
    [Header("Slope Movement")]
+   
    [Tooltip("How much")]
    [SerializeField] private float pullDownForce = 5f;
 
@@ -35,6 +36,7 @@ public class PlayerController : MonoBehaviour
    [SerializeField] private float raycastLength = 0.5f;
    
    [Header("Camera")]
+   
    [Tooltip("The focus and rotation point of the camera.")]
    [SerializeField] private Transform cameraTarget;
    
@@ -83,6 +85,8 @@ public class PlayerController : MonoBehaviour
    [Tooltip("Time in sec the character has to be in the air before the animator reacts.")]
    [SerializeField] private float coyoteTime = 0.2f;
 
+   #endregion
+   
    private CharacterController characterController;
    private GameInput input;
    private InputAction lookAction;
@@ -97,8 +101,6 @@ public class PlayerController : MonoBehaviour
 
    private bool isGrounded = true;
    private float airTime;
-
-   #endregion
 
    #region Unity Event Functions
 
@@ -142,8 +144,6 @@ public class PlayerController : MonoBehaviour
    {
       input.Disable();
    }
-
-   
 
    private void OnDestroy()
    {
