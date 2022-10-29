@@ -1,3 +1,5 @@
+using System;
+
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -91,16 +93,18 @@ public class PlayerController : MonoBehaviour
    private GameInput input;
    private InputAction lookAction;
    private InputAction moveAction;
-   
+
    private Vector2 lookInput;
    private Vector2 moveInput;
-   
+
    private Quaternion characterTargetRotation = Quaternion.identity;
    private Vector2 cameraRotation;
    private Vector3 lastMovement;
 
    private bool isGrounded = true;
    private float airTime;
+
+   private Interactable selectedInteractable;
 
    #region Unity Event Functions
 
@@ -113,7 +117,8 @@ public class PlayerController : MonoBehaviour
       moveAction = input.Player.Move;
       lookAction = input.Player.Look;
 
-      // TODO Subscribe to input events
+      // Subscribe to input events
+      input.Player.Interact.performed += Interact;
    }
 
    private void OnEnable()
@@ -147,8 +152,23 @@ public class PlayerController : MonoBehaviour
 
    private void OnDestroy()
    {
-      // TODO Unsubscribe form input events.
+      // Unsubscribe form input events.
+      input.Player.Interact.performed += Interact;
    }
+
+   #region Physics
+
+   private void OnTriggerEnter(Collider other)
+   {
+      TrySelectInteractable(other);
+   }
+
+   private void OnTriggerExit(Collider other)
+   {
+      TryDeselectInteractable(other);
+   }
+
+   #endregion
    #endregion
 
    #region Animator
@@ -296,6 +316,46 @@ public class PlayerController : MonoBehaviour
       }
 
       return lookAction.activeControl.name == "delta";
+   }
+
+   #endregion
+
+   #region Interaction
+
+   private void Interact(InputAction.CallbackContext _)
+   {
+      if (selectedInteractable != null)
+      {
+         selectedInteractable.Interact();
+      }
+   }
+
+   private void TrySelectInteractable(Collider other)
+   {
+      Interactable interactable = other.GetComponent<Interactable>();
+
+      if (interactable == null) {return;}
+
+      if (selectedInteractable != null)
+      {
+         selectedInteractable.Deselect();
+      }
+
+      selectedInteractable = interactable;
+      selectedInteractable.Select();
+   }
+
+   private void TryDeselectInteractable(Collider other)
+   {
+      Interactable interactable = other.GetComponent<Interactable>();
+
+      if (interactable == null) {return;}
+
+      if (interactable == selectedInteractable)
+      {
+         selectedInteractable.Deselect();
+         selectedInteractable = null;
+      }
    }
 
    #endregion
