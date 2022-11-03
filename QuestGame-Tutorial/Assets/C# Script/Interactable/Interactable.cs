@@ -1,3 +1,5 @@
+using System;
+
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -19,7 +21,10 @@ public class Interactable : MonoBehaviour
 
     #region Unity Event Functions
 
-
+    private void Start()
+    {
+        
+    }
 
     #endregion
 

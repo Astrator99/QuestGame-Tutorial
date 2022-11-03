@@ -1,5 +1,7 @@
 using System;
 
+using UnityEditor;
+
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -120,7 +122,7 @@ public class PlayerController : MonoBehaviour
       // Subscribe to input events
       input.Player.Interact.performed += Interact;
    }
-
+   
    private void OnEnable()
    {
       input.Enable();
@@ -128,8 +130,7 @@ public class PlayerController : MonoBehaviour
 
    private void Update()
    {
-      lookInput = lookAction.ReadValue<Vector2>();
-      moveInput = moveAction.ReadValue<Vector2>();
+      ReadInput();
       
       Rotate(moveInput);
       Move(moveInput);
@@ -169,6 +170,25 @@ public class PlayerController : MonoBehaviour
    }
 
    #endregion
+   #endregion
+
+   #region Input
+
+   public void EnableInput()
+   {
+      input.Enable();
+   }
+
+   public void DisableInput()
+   {
+      input.Disable();
+   }
+
+   private void ReadInput()
+   {
+      lookInput = lookAction.ReadValue<Vector2>();
+      moveInput = moveAction.ReadValue<Vector2>();
+   }
    #endregion
 
    #region Animator
