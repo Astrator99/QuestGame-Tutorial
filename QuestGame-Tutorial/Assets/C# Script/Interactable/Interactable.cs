@@ -1,4 +1,5 @@
-using System;
+using System.Collections.Generic;
+using System.Linq;
 
 using UnityEngine;
 using UnityEngine.Events;
@@ -23,13 +24,25 @@ public class Interactable : MonoBehaviour
 
     private void Start()
     {
-        
+        List<Interaction> interactions = GetComponentsInChildren<Interaction>(true).ToList();
+
+        if (interactions.Count > 0)
+        {
+            interactions[0].gameObject.SetActive(true);
+        }
     }
 
     #endregion
 
     public void Interact()
     {
+        Interaction interaction = FindActiveInteraction();
+
+        if (interaction != null)
+        {
+            interaction.Execute();
+        }
+        
         onInteracted.Invoke();
     }
 
@@ -41,5 +54,10 @@ public class Interactable : MonoBehaviour
     public void Deselect()
     {
         onDeselected.Invoke();
+    }
+
+    private Interaction FindActiveInteraction()
+    {
+        return GetComponentInChildren<Interaction>(false);
     }
 }
