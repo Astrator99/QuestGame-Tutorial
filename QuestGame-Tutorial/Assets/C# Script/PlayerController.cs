@@ -125,7 +125,7 @@ public class PlayerController : MonoBehaviour
    
    private void OnEnable()
    {
-      input.Enable();
+      EnableInput();
    }
 
    private void Update()
@@ -148,7 +148,7 @@ public class PlayerController : MonoBehaviour
 
    private void OnDisable()
    {
-      input.Disable();
+      DisableInput();
    }
 
    private void OnDestroy()

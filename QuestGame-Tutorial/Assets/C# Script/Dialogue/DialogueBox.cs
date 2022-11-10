@@ -67,6 +67,8 @@ public class DialogueBox : MonoBehaviour
         dialogueText.SetText(dialogueLine.text);
         
         // Read out other information such as speaker image
+        
+        DisplayButtons(dialogueLine.choices);
     }
     
     private void DisplayButtons(List<Choice> choices)
