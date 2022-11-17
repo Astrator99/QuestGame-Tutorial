@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 825909810234056400}
   - component: {fileID: 7314927462487951589}
   m_Layer: 0
-  m_Name: Zelt
+  m_Name: apple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

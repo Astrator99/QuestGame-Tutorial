@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1749120633948189115}
   - component: {fileID: 1749120633948189114}
   - component: {fileID: 1749120633948189117}
+  - component: {fileID: 8273453744462325070}
   m_Layer: 0
   m_Name: "AutomatikBr\xFCcke"
   m_TagString: Untagged
@@ -368,6 +369,23 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &8273453744462325070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749120633948189119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c61b80dd803b53a44b7afa86753f2367, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platform: {fileID: 0}
+  retractedPosition: {x: 0, y: 0, z: 0}
+  extendedPosition: {x: 0, y: 0, z: 0}
+  startExtended: 0
+  moveDuration: 1
 --- !u!1 &1749120634269138187
 GameObject:
   m_ObjectHideFlags: 0
