@@ -48,6 +48,7 @@ public class Reactor : MonoBehaviour
         {
             questEntry.gameObject.SetActive(false);
         }
+        OnStateChanged();
         GameState.StateChanged -= OnStateChanged;
     }
 

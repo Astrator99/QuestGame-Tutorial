@@ -549,6 +549,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8499928113001674172, guid: 5582006d4e9060d4dad2680004086260,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 8499928113001674172, guid: 5582006d4e9060d4dad2680004086260,
+        type: 3}
       propertyPath: m_Name
       value: _Collectable
       objectReference: {fileID: 0}

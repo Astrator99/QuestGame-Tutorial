@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8547362327006099261}
   - component: {fileID: 2350340240660032484}
   - component: {fileID: 965043879650144261}
+  - component: {fileID: 4154289268222101694}
   m_Layer: 0
   m_Name: Knopf
   m_TagString: Untagged
@@ -1284,6 +1285,24 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &4154289268222101694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663556324994270219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42a86b5a01524d94c991f321b86bbde6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yMovement: -0.049
+  downDuration: 0.3
+  easeIn: 2
+  durationIn: 0.3
+  easeOut: 24
+  durationOut: 0.5
 --- !u!1 &1800867527175169390
 GameObject:
   m_ObjectHideFlags: 0
@@ -1721,8 +1740,49 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8499928113001674172, guid: 5582006d4e9060d4dad2680004086260,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 8499928113001674172, guid: 5582006d4e9060d4dad2680004086260,
+        type: 3}
       propertyPath: m_Name
       value: ButtonPodest
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939815898121759832, guid: 5582006d4e9060d4dad2680004086260,
+        type: 3}
+      propertyPath: onInteracted.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939815898121759832, guid: 5582006d4e9060d4dad2680004086260,
+        type: 3}
+      propertyPath: onInteracted.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939815898121759832, guid: 5582006d4e9060d4dad2680004086260,
+        type: 3}
+      propertyPath: onInteracted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4154289268222101694}
+    - target: {fileID: 8939815898121759832, guid: 5582006d4e9060d4dad2680004086260,
+        type: 3}
+      propertyPath: onInteracted.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939815898121759832, guid: 5582006d4e9060d4dad2680004086260,
+        type: 3}
+      propertyPath: onInteracted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayAnimation
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939815898121759832, guid: 5582006d4e9060d4dad2680004086260,
+        type: 3}
+      propertyPath: onInteracted.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ButtonAnimation, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939815898121759832, guid: 5582006d4e9060d4dad2680004086260,
+        type: 3}
+      propertyPath: onInteracted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5582006d4e9060d4dad2680004086260, type: 3}
