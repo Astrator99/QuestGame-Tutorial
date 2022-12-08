@@ -140,6 +140,7 @@ public class DialogueBox : MonoBehaviour
 
         return choiceButtons;
     }
+    
     private void ShowContinueButton(bool show)
     {
         continueButton.gameObject.SetActive(show);

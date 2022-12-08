@@ -12,6 +12,10 @@ GameObject:
   - component: {fileID: 4517297750549250990}
   - component: {fileID: 1825186103367841636}
   - component: {fileID: 2848538406615489809}
+  - component: {fileID: 4364789285023649675}
+  - component: {fileID: 2194627460844546238}
+  - component: {fileID: 7172473007384092063}
+  - component: {fileID: 6875070111354885532}
   m_Layer: 0
   m_Name: Haus_Standart
   m_TagString: Untagged
@@ -26,11 +30,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 167936550050961073}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -5.5, y: 6.6, z: -17.6}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 831994878947701697}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
@@ -101,5 +106,102 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8.59, y: 8.05, z: 7.79}
-  m_Center: {x: 1.5, y: 1.9, z: 0.24}
+  m_Size: {x: 8.026654, y: 0, z: 7.7899995}
+  m_Center: {x: 1.2183281, y: -2.1250017, z: 0.24000008}
+--- !u!65 &4364789285023649675
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167936550050961073}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3867946, y: 3.5357723, z: 7.7734923}
+  m_Center: {x: 5.0705347, y: -0.35061154, z: 0.2420152}
+--- !u!65 &2194627460844546238
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167936550050961073}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.9175987, y: 3.0730236, z: 0.6367084}
+  m_Center: {x: 1.1669506, y: -0.58198595, z: -3.3802903}
+--- !u!65 &7172473007384092063
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167936550050961073}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.8506236, y: 3.2160842, z: 0.4824821}
+  m_Center: {x: 1.1542006, y: -0.51045626, z: 3.8715565}
+--- !u!65 &6875070111354885532
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167936550050961073}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.64812636, y: 3.2679176, z: 5.1982985}
+  m_Center: {x: -2.4773874, y: -0.48454136, z: 1.4460989}
+--- !u!1 &5704681509081686648
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 831994878947701697}
+  - component: {fileID: 4138544487440182143}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Inside
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &831994878947701697
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5704681509081686648}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 657369189730208779}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4138544487440182143
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5704681509081686648}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.456986, y: 4.145565, z: 8.385561}
+  m_Center: {x: 1.380254, y: -0.022435427, z: 0.39822608}
