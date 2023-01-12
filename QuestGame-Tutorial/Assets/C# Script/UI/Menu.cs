@@ -71,6 +71,16 @@ public class Menu : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    public void Show()
+    {
+        gameObject.SetActive(true);
+        // TODO DOTween animations
+    }
+    public void Hide()
+    {
+        gameObject.SetActive(false);
+        // TODO DOTween animations
+    }
     private IEnumerator DelayedSelect(Selectable newSelection)
     {
         // Wait a frame.
